@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abcs",
+  "info": {
+    "singularName": "abc",
+    "pluralName": "abcs",
+    "displayName": "abc"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "boolean": {
+      "type": "boolean"
+    },
+    "date": {
+      "type": "date"
+    },
+    "date2": {
+      "type": "datetime"
+    },
+    "boolean2": {
+      "type": "boolean"
+    }
+  }
+}

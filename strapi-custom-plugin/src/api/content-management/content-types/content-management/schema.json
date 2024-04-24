@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_managements",
+  "info": {
+    "singularName": "content-management",
+    "pluralName": "content-managements",
+    "displayName": "content-management",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30,
+      "minLength": 3
+    },
+    "isEnabled": {
+      "type": "boolean",
+      "required": true
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "zipcode": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "email"
+    },
+    "date": {
+      "type": "date"
+    },
+    "time": {
+      "type": "enumeration",
+      "enum": [
+        "morning",
+        "evening",
+        "night",
+        "afternoon"
+      ]
+    },
+    "organization_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::organization.organization",
+      "inversedBy": "content_management"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "content_management"
+    },
+    "metadescription": {
+      "type": "text"
+    }
+  }
+}

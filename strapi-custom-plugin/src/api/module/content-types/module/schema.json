@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "modules",
+  "info": {
+    "singularName": "module",
+    "pluralName": "modules",
+    "displayName": "module",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content-management.content-management"
+    },
+    "setting": {
+      "type": "dynamiczone",
+      "components": [
+        "content-management.content-management"
+      ]
+    },
+    "dinner": {
+      "type": "dynamiczone",
+      "components": [
+        "content-management.content-management"
+      ]
+    },
+    "organization_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::organization.organization",
+      "inversedBy": "modules"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "modules"
+    }
+  }
+}

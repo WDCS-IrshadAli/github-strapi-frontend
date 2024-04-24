@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_content_management_content_managements",
+  "info": {
+    "displayName": "content-management",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 40,
+      "minLength": 3
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "metatitle": {
+      "type": "string"
+    },
+    "metadescription": {
+      "type": "string"
+    },
+    "metakeywords": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}
